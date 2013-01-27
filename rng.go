@@ -9,8 +9,8 @@ import (
 var vowels = []string{"a", "e", "i", "o", "u"}
 var extendedVowels = []string{"a", "e", "i", "o", "u", "a", "e", "i", "o", "y", "ea", "ou", "ue", "ia", "ie", "eo", "eu", "ui", "io", "oe"}
 var consonants = []string{"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"}
-var specialStartConsonants = []string{"bl", "br", "ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kh", "kl", "kr", "ph", "pl", "pr", "qu", "sc", "scr", "sh", "sk", "sl", "sm", "sn", "sp", "sq", "st", "str", "sw", "tr", "tw", "vl", "vr", "wh", "wr"}
-var specialConsonants = []string{"ng", "gh", "ln", "rd", "gm", "ck", "wl", "ft", "rt", "ght", "ll", "rp", "mn", "ct", "rk", "wf", "tt", "rf", "ss", "dd", "bb", "ff", "gg", "mm", "nn", "pp", "rr", "zz"}
+var specialStartConsonants = []string{"bl", "br", "ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kh", "kl", "kr", "ph", "pl", "pr", "qu", "sc", "scr", "sh", "sk", "sl", "sm", "sn", "sp", "sq", "st", "str", "sw", "tr", "tw", "wh", "wr"}
+var specialConsonants = []string{"ng", "gh", "ln", "rd", "gm", "ck", "wl", "ft", "rt", "ght", "ll", "rp", "mn", "ct", "rk", "wf", "tt", "rf", "ss", "dd", "bb", "ff", "gg", "mm", "nn", "pp", "rr", "zz", "ld", "lb", "ls", "vl", "vr"}
 
 func pickString(strings ...string) (string) {
 	return string(strings[rand.Int31n(int32(len(strings)))])
