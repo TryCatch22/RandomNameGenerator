@@ -13,27 +13,27 @@ var consonants = []string{"b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n",
 var specialStartConsonants = []string{"bl", "br", "ch", "cl", "cr", "dr", "fl", "fr", "gl", "gr", "kh", "kl", "kr", "ph", "pl", "pr", "qu", "sc", "scr", "sh", "sk", "sl", "sm", "sn", "sp", "sq", "st", "str", "sw", "tr", "tw", "wh", "wr"}
 var specialConsonants = []string{"ng", "gh", "ln", "rd", "gm", "ck", "wl", "ft", "rt", "ght", "ll", "rp", "mn", "ct", "rk", "wf", "tt", "rf", "ss", "dd", "bb", "ff", "gg", "mm", "nn", "pp", "rr", "zz", "ld", "lb", "ls", "vl", "vr"}
 
-func pickString(strings ...string) (string) {
+func pickString(strings ...string) string {
 	return string(strings[rand.Int31n(int32(len(strings)))])
 }
 
-func generateNormalSyllable() (string) {
+func generateNormalSyllable() string {
 	return pickString(consonants...) + pickString(extendedVowels...)
 }
 
-func generateShortSyllable() (string) {
+func generateShortSyllable() string {
 	return pickString(consonants...) + pickString(vowels...)
 }
 
-func generateSpecialStartSyllable() (string) {
+func generateSpecialStartSyllable() string {
 	return pickString(specialStartConsonants...) + pickString(extendedVowels...)
 }
 
-func generateSpecialSyllable() (string) {
+func generateSpecialSyllable() string {
 	return pickString(specialConsonants...) + pickString(extendedVowels...)
 }
 
-func generateName() (string) {
+func generateName() string {
 	word := ""
 	
 	num := rand.Int31n(int32(8))
@@ -56,6 +56,7 @@ func generateName() (string) {
 }
 
 var count int
+
 func init() {
 	flag.IntVar(&count, "c", 25, "The number (or 'count') of names to be generated.")
 }
