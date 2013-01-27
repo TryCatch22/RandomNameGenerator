@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"math/rand"
 	"time"
@@ -54,10 +55,17 @@ func generateName() (string) {
 	return word
 }
 
-func main() {
+var count int
+func init() {
+	flag.IntVar(&count, "c", 25, "The number (or 'count') of names to be generated.")
+}
+
+func main() {	
+	flag.Parse()
+
 	rand.Seed(time.Now().UTC().UnixNano())
 	
-	for i := 0; i < 50; i++ {
+	for i := 0; i < count; i++ {
 		fmt.Println(generateName())
 	}
 }

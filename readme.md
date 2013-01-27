@@ -6,8 +6,14 @@ A handy little tool used to generate random, short, punchy names for top-secret 
 Usage
 -----
 
+The basic usage below generates 25 of said awesome punchy names by default.
+
 ```go
 go run rng.go
 ```
 
-Generates 50 of said awesome punchy names.
+Alternatively, the number of names to be generated can be set manually with the `-c` flag (for 'count'). The example below will generate 500 names, for you eager beavers.
+
+```go
+go run rng.go -c 500
+```
