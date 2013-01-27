@@ -8,12 +8,12 @@ Usage
 
 The basic usage below generates 25 of said awesome punchy names by default.
 
-```go
+```sh
 go run rng.go
 ```
 
 Alternatively, the number of names to be generated can be set manually with the `-c` flag (for 'count'). The example below will generate 500 names, for you eager beavers.
 
-```go
+```sh
 go run rng.go -c 500
 ```
